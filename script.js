@@ -15,12 +15,19 @@ function loadQuote() {
                 "<img src='" + quote.photo + "'>" +
                 "<ul>" +
                 "<li>" + quote.quote + "</li>" +
-                "<li>Author:" + quote.author + "</li>" +
+                "<li>Author:" + quote.author + "<   /li>" +
                 "<li>ID:" + quote.id + "</li>" +
                 "</ul>";
+            document.getElementById("quote").innerHTML = result;
+        } else if (this.status == 404) {
+            document.getElementById("quote").innerHTML = "Page not found!";
 
         }
-        document.getElementById("quote").innerHTML = result;
+
     }
+    xhr.onerror = function () {
+        document.getElementById("error").innerHTML = "Request Error";
+    }
+
     xhr.send();
 }
