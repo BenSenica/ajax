@@ -8,8 +8,19 @@ function loadQuote() {
         if (this.status == 200) {
             var quote = JSON.parse(this.responseText);
 
+            var result = " ";
+
+            result +=
+                "<div class='quote'>" +
+                "<img src='" + quote.photo + "'>" +
+                "<ul>" +
+                "<li>" + quote.quote + "</li>" +
+                "<li>Author:" + quote.author + "</li>" +
+                "<li>ID:" + quote.id + "</li>" +
+                "</ul>";
+
         }
-        console.log(quote);
+        document.getElementById("quote").innerHTML = result;
     }
     xhr.send();
 }
