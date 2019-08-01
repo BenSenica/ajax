@@ -18,9 +18,9 @@ function loadQuote() {
                 "<li>Author:" + quote.author + "</li>" +
                 "<li>ID:" + quote.id + "</li>" +
                 "</ul>";
-            document.getElementById("quote").innerHTML = result;
+            document.getElementById("container").innerHTML = result;
         } else if (this.status == 404) {
-            document.getElementById("quote").innerHTML = "Page not found!";
+            document.getElementById("container").innerHTML = "Page not found!";
 
         }
 

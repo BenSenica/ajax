@@ -1,14 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        ". button ."
+        ". image quote"
+        ". author ."
+        ". id .";
+}
+
 .quote {
     display: flex;
-}
 
-div img {
-    width: auto;
-    height: auto;
-    max-width: 400px;
-    max-height: 400px;
-}
+    img {
+        width: auto;
+        height: auto;
+        max-width: 400px;
+        max-height: 400px;
+    }
 
-div li {
-    list-style: none;
+    li {
+        list-style: none;
+    }
 }
