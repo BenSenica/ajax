@@ -12,13 +12,12 @@ function loadQuote() {
 
                 result +=
                     "<div class='quote'>" +
-                    "<img src='" + quote.photo + "'>" +
+                    "<img src='/images/placeholder_image.png'>" +
                     "<ul>" +
                     "<li id='quoteText'>" + quote.quote + "</li>" +
                     "<li id='author'>--   " + quote.author + "   -- </li>" +
                     "</ul>" + "</div>";
                 document.getElementById("container").innerHTML = result;
-                console.log("no url found");
             } else {
 
                 var result = " ";
