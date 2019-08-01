@@ -13,7 +13,7 @@ function loadQuote() {
 
                 result +=
                     "<div class='quote'>" +
-                    "<img src='/images/placeholder_image.png'>" +
+                    "<img src='images/placeholder_image.png'>" +
                     "<ul>" +
                     "<li id='quoteText'>" + quote.quote + "</li>" +
                     "<li id='author'>--   " + quote.author + "   -- </li>" +
