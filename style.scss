@@ -1,34 +1,41 @@
-* {
+body {
     padding: 0;
     margin: 0;
 }
 
-#container {
-    display: grid;
-    grid-template-columns: 1fr, 1fr, 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-        ". button ."
-        ". image quote"
-        ". author ."
-        ". id .";
-}
+#container {}
+
+#button1 {}
 
 .quote {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "image quote"
+        "author ."
+        "id .";
 
     img {
         width: auto;
         height: auto;
-        max-width: 400px;
-        max-height: 400px;
+        max-width: 300px;
+        max-height: 300px;
     }
 
     li {
         list-style: none;
+    }
 
-        quoteText {
-            grid-area: quote;
-        }
+    #quoteText {
+        grid-area: quote;
+    }
+
+    #author {
+        grid-area: author;
+    }
+
+    #id {
+        grid-area: id;
     }
 }

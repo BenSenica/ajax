@@ -1,23 +1,24 @@
-* {
+body {
   padding: 0;
   margin: 0; }
 
-#container {
-  display: grid;
-  grid-template-columns: 1fr, 1fr, 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: ". button ." ". image quote" ". author ." ". id ."; }
-
 .quote {
-  display: flex; }
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: "image quote" "author ." "id ."; }
   .quote img {
     width: auto;
     height: auto;
-    max-width: 400px;
-    max-height: 400px; }
+    max-width: 300px;
+    max-height: 300px; }
   .quote li {
     list-style: none; }
-    .quote li quoteText {
-      grid-area: quote; }
+  .quote #quoteText {
+    grid-area: quote; }
+  .quote #author {
+    grid-area: author; }
+  .quote #id {
+    grid-area: id; }
 
 /*# sourceMappingURL=style.css.map */
