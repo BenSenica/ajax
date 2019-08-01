@@ -7,17 +7,31 @@ function loadQuote() {
     xhr.onload = function () {
         if (this.status == 200) {
             var quote = JSON.parse(this.responseText);
+            if (quote.photo == "") {
+                var result = " ";
 
-            var result = " ";
+                result +=
+                    "<div class='quote'>" +
+                    "<img src='" + quote.photo + "'>" +
+                    "<ul>" +
+                    "<li id='quoteText'>" + quote.quote + "</li>" +
+                    "<li id='author'>--   " + quote.author + "   -- </li>" +
+                    "</ul>" + "</div>";
+                document.getElementById("container").innerHTML = result;
+                console.log("no url found");
+            } else {
 
-            result +=
-                "<div class='quote'>" +
-                "<img src='" + quote.photo + "'>" +
-                "<ul>" +
-                "<li id='quoteText'>" + quote.quote + "</li>" +
-                "<li id='author'>--   " + quote.author + "   -- </li>" +
-                "</ul>" + "</div>";
-            document.getElementById("container").innerHTML = result;
+                var result = " ";
+
+                result +=
+                    "<div class='quote'>" +
+                    "<img src='" + quote.photo + "'>" +
+                    "<ul>" +
+                    "<li id='quoteText'>" + quote.quote + "</li>" +
+                    "<li id='author'>--   " + quote.author + "   -- </li>" +
+                    "</ul>" + "</div>";
+                document.getElementById("container").innerHTML = result;
+            }
         } else if (this.status == 404) {
             document.getElementById("container").innerHTML = "Page not found!";
 
