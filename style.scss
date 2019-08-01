@@ -17,25 +17,30 @@ body {
         "id .";
 
     img {
+        grid-area: image;
         width: auto;
         height: auto;
         max-width: 300px;
         max-height: 300px;
     }
 
-    li {
-        list-style: none;
-    }
+    ul {
+        display: grid;
 
-    #quoteText {
-        grid-area: quote;
-    }
+        li {
+            list-style: none;
 
-    #author {
-        grid-area: author;
-    }
+            #quoteText {
+                grid-area: quote;
+            }
 
-    #id {
-        grid-area: id;
+            #author {
+                grid-area: author;
+            }
+
+            #id {
+                grid-area: id;
+            }
+        }
     }
 }

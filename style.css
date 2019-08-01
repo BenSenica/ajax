@@ -8,17 +8,20 @@ body {
   grid-template-rows: auto;
   grid-template-areas: "image quote" "author ." "id ."; }
   .quote img {
+    grid-area: image;
     width: auto;
     height: auto;
     max-width: 300px;
     max-height: 300px; }
-  .quote li {
-    list-style: none; }
-  .quote #quoteText {
-    grid-area: quote; }
-  .quote #author {
-    grid-area: author; }
-  .quote #id {
-    grid-area: id; }
+  .quote ul {
+    display: grid; }
+    .quote ul li {
+      list-style: none; }
+      .quote ul li #quoteText {
+        grid-area: quote; }
+      .quote ul li #author {
+        grid-area: author; }
+      .quote ul li #id {
+        grid-area: id; }
 
 /*# sourceMappingURL=style.css.map */
