@@ -8,7 +8,6 @@ body {
     background-color: $lightgray;
 }
 
-#container {}
 
 #center {
     display: flex;
@@ -17,7 +16,7 @@ body {
 }
 
 #button1 {
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #000;
     color: #fff;
     border-color: $lightgray;
@@ -48,6 +47,8 @@ body {
         display: grid;
         margin: auto;
         padding: 10px;
+        font-family: Helvetica, sans-serif;
+        font-size: 25px;
 
         li {
             list-style: none;
@@ -63,6 +64,7 @@ body {
 
             #author {
                 grid-area: author;
+                justify-content: flex-end;
             }
 
         }

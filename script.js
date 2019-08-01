@@ -7,6 +7,7 @@ function loadQuote() {
     xhr.onload = function () {
         if (this.status == 200) {
             var quote = JSON.parse(this.responseText);
+            //check if the random gotten quote has a picture of author and if not add a placeholder image.
             if (quote.photo == "") {
                 var result = " ";
 
