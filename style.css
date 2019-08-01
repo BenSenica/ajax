@@ -7,7 +7,7 @@ body {
 #center {
   display: flex;
   justify-content: center;
-  margin: 50px; }
+  margin: 60px; }
 
 .quote {
   display: grid;
