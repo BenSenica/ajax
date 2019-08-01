@@ -17,5 +17,7 @@
     max-height: 400px; }
   .quote li {
     list-style: none; }
+    .quote li quoteText {
+      grid-area: quote; }
 
 /*# sourceMappingURL=style.css.map */

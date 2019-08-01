@@ -14,9 +14,9 @@ function loadQuote() {
                 "<div class='quote'>" +
                 "<img src='" + quote.photo + "'>" +
                 "<ul>" +
-                "<li>" + quote.quote + "</li>" +
-                "<li>Author:" + quote.author + "</li>" +
-                "<li>ID:" + quote.id + "</li>" +
+                "<li id='quoteText'>" + quote.quote + "</li>" +
+                "<li id='author'>Author:" + quote.author + "</li>" +
+                "<li id='id'>ID:" + quote.id + "</li>" +
                 "</ul>";
             document.getElementById("container").innerHTML = result;
         } else if (this.status == 404) {

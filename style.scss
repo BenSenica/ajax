@@ -26,5 +26,9 @@
 
     li {
         list-style: none;
+
+        quoteText {
+            grid-area: quote;
+        }
     }
 }
